@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manchester United 1998–99 Treble Squad</title>
+  <meta name="description" content="Manchester United 1998-99 Treble squad — profiles, starting XI, formation and season timeline." />
+  <style>
+    :root{
+      --mu-red: #DA291C;
+      --dark: #0b0b0b;
+      --muted: #666;
+      --card-bg: #fff;
+      --glass: rgba(255,255,255,0.06);
+      --max-width: 1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:
+        linear-gradient(180deg, rgba(10,10,10,0.9) 0%, rgba(25,25,25,0.98) 100%),
+        url('https://upload.wikimedia.org/wikipedia/commons/7/7a/Old_Trafford_panorama_2012.jpg') center/cover fixed;
+      color:#eee;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px 16px;
+      display:flex;
+      justify-content:center;
+      min-height:100vh;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:12px;
+      padding:22px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .crest{
+      height:84px;
+      width:84px;
+      background:var(--mu-red);
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:28px;
+      color:#fff;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    }
+    h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:0.4px;
+    }
+    p.lead{
+      margin:6px 0 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 380px;
+      gap:18px;
+      margin-top:18px;
+    }
+
+    /* Left column */
+    .main{
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      padding:14px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    .section{
+      margin-bottom:16px;
+    }
+    .section h2{
+      margin:0 0 8px 0;
+      font-size:16px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .section .muted{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+    }
+
+    /* Squad grid */
+    .squad-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+      gap:10px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      border-radius:8px;
+      padding:10px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      border:1px solid rgba(255,255,255,0.03);
+      transition: transform .18s ease, box-shadow .18s ease;
+      cursor:pointer;
+    }
+    .card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .avatar{
+      width:56px;
+      height:56px;
+      border-radius:8px;
+      overflow:hidden;
+      background:#222;
+      flex-shrink:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:#fff;
+      font-size:22px;
+      text-transform:uppercase;
+    }
+    .card .info{
+      min-width:0;
+    }
+    .name{
+      font-weight:600;
+      font-size:14px;
+      margin-bottom:2px;
+    }
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* Right column */
+    .aside{
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      padding:14px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.03);
+      position:relative;
+      height:100%;
+    }
+
+    .formation{
+      background:linear-gradient(180deg, rgba(0,0,0,0.22), rgba(255,255,255,0.02));
+      border-radius:8px;
+      padding:8px;
+    }
+    .pitch{
+      width:100%;
+      height:420px;
+      background: linear-gradient(180deg, rgba(43,160,43,0.12), rgba(43,160,43,0.06));
+      border-radius:6px;
+      display:grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      position:relative;
+      padding:12px;
+      box-shadow: inset 0 0 30px rgba(0,0,0,0.2);
+    }
+    .player-pin{
+      width:84px;
+      height:36px;
+      background:rgba(10,10,10,0.6);
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:13px;
+      padding:4px 8px;
+      color:#fff;
+      border:1px solid rgba(255,255,255,0.05);
+      margin:auto;
+    }
+    .pitch .row{display:flex; align-items:center; justify-content:space-around}
+    .small{
+      font-size:12px;
+      color:var(--muted);
+      margin-top:8px;
+    }
+
+    /* Timeline */
+    .timeline{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      margin-top:8px;
+    }
+    .event{
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      padding:10px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.03);
+      font-size:13px;
+    }
+    .event .year{font-weight:700; color:var(--mu-red); margin-right:8px}
+
+    footer{
+      margin-top:14px;
+      font-size:13px;
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    /* Modal */
+    .modal-backdrop{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.6);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:50;
+      padding:20px;
+    }
+    .modal{
+      width:100%;
+      max-width:780px;
+      background:linear-gradient(180deg,#071018,#072226);
+      border-radius:12px;
+      padding:18px;
+      border:1px solid rgba(255,255,255,0.06);
+    }
+    .modal .top{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .modal .bio{margin-top:10px; color:#ddd}
+    .close-btn{
+      margin-left:auto;
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      color:#fff;
+      padding:6px 10px;
+      border-radius:8px;
+      cursor:pointer;
+    }
+
+    /* Responsive */
+    @media (max-width:980px){
+      .grid{grid-template-columns: 1fr; }
+      .aside{order:2}
+      .main{order:1}
+      .pitch{height:320px}
+    }
+
+    /* small helpers */
+    .btn{
+      display:inline-block;
+      padding:8px 12px;
+      background:var(--mu-red);
+      color:#fff;
+      border-radius:8px;
+      border:none;
+      text-decoration:none;
+      cursor:pointer;
+      font-weight:600;
+    }
+    .muted-bold{color: #cfcfcf; font-weight:600}
+    .download-json{background:transparent; border:1px solid rgba(255,255,255,0.06); color:#fff; padding:8px 10px; border-radius:8px; cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="crest" aria-hidden="true">MU</div>
+      <div>
+        <h1>Manchester United — 1998–99 Treble Squad</h1>
+        <p class="lead">Premier League, FA Cup and UEFA Champions League winners — iconic squad and season.</p>
+      </div>
+    </header>
+
+    <div class="grid" role="region" aria-label="Main content">
+      <main class="main" id="main">
+        <section class="section">
+          <h2>Squad</h2>
+          <div class="muted">Click a player for a short profile and season contribution.</div>
+        </section>
+
+        <section class="section squad-grid" id="squadGrid" aria-live="polite">
+          <!-- Player cards inserted by JS -->
+        </section>
+
+        <section class="section">
+          <h2>Season Highlights</h2>
+          <div class="timeline" id="timeline">
+            <!-- Events inserted by JS -->
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Starting XI & Key Subs</h2>
+          <div class="muted">Typical selection used in big matches (formation: 4-4-1-1 / 4-4-2 variations)</div>
+          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+            <span class="muted-bold">Goalkeeper:</span><span class="meta">Peter Schmeichel</span>
+            <span style="width:8px"></span>
+            <span class="muted-bold">Defense:</span><span class="meta">Gary Neville, Jaap Stam, Ronny Johnsen, Denis Irwin</span>
+            <span style="width:8px"></span>
+            <span class="muted-bold">Midfield:</span><span class="meta">David Beckham, Nicky Butt, Roy Keane, Ryan Giggs</span>
+            <span style="width:8px"></span>
+            <span class="muted-bold">Attack:</span><span class="meta">Dwight Yorke, Andy Cole (subs: Teddy Sheringham, Ole Gunnar Solskjær)</span>
+          </div>
+        </section>
+      </main>
+
+      <aside class="aside" aria-label="Formation and timeline">
+        <div class="formation section">
+          <h2>Formation</h2>
+          <div class="small">Visualised 4-4-1-1 used in the Champions League final vs Bayern Munich</div>
+          <div class="pitch" id="pitch" aria-hidden="false" role="img" aria-label="Pitch showing positions">
+            <div class="row" style="align-items:flex-start">
+              <div></div>
+              <div class="player-pin" data-player-id="1">Schmeichel</div>
+              <div></div>
+            </div>
+
+            <div class="row">
+              <div class="player-pin" data-player-id="4">Neville</div>
+              <div class="player-pin" data-player-id="2">Stam</div>
+              <div class="player-pin" data-player-id="3">Johnsen</div>
+              <div class="player-pin" data-player-id="5">Irwin</div>
+            </div>
+
+            <div class="row">
+              <div class="player-pin" data-player-id="6">Beckham</div>
+              <div class="player-pin" data-player-id="8">Keane</div>
+              <div class="player-pin" data-player-id="7">Butt</div>
+              <div class="player-pin" data-player-id="9">Giggs</div>
+            </div>
+
+            <div class="row">
+              <div class="player-pin" data-player-id="11">Sheringham</div>
+              <div class="player-pin" data-player-id="10">Yorke</div>
+              <div class="player-pin" data-player-id="12">Cole</div>
+            </div>
+
+            <div style="position:absolute;left:12px;bottom:8px;color:var(--muted);font-size:12px;">
+              Formation note: 4-4-1-1 (Sheringham as support striker behind Yorke in final)
+            </div>
+          </div>
+        </div>
+
+        <div class="section" style="margin-top:12px">
+          <h2>Treble Timeline</h2>
+          <div class="muted">Key dates in the run to the treble.</div>
+          <div class="timeline" id="rightTimeline">
+            <!-- inserted by JS -->
+          </div>
+        </div>
+
+        <footer>
+          <div>Data & content curated for educational use</div>
+          <div>
+            <button class="download-json" id="downloadBtn" title="Download squad and events as JSON">Download JSON</button>
+          </div>
+        </footer>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <div class="top">
+        <div id="modalAvatar" class="avatar" style="width:84px;height:84px;border-radius:10px;font-size:36px"></div>
+        <div>
+          <div id="modalName" style="font-size:18px;font-weight:700"></div>
+          <div id="modalPosition" style="color:var(--muted);margin-top:6px"></div>
+          <div id="modalKey" style="color:#ddd;margin-top:8px;font-weight:600"></div>
+        </div>
+        <button class="close-btn" id="modalClose">Close</button>
+      </div>
+      <div class="bio" id="modalBio"></div>
+      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+        <a id="modalWiki" class="btn" target="_blank" rel="noopener">More (Wikipedia)</a>
+        <button id="modalClose2" class="download-json">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Squad data (1998-99 Manchester United Treble squad core players)
+    // You can expand player objects with photos and more stats.
+    const squad = [
+      { id:1, name:"Peter Schmeichel", position:"Goalkeeper", short:"Captain in key fixtures, commanding presence and match-winning saves.", key:"Premier League winner, Champions League final clean sheet crucial", wiki:"https://en.wikipedia.org/wiki/Peter_Schmeichel" },
+      { id:2, name:"Jaap Stam", position:"Centre-back", short:"Dominant defender, strong in tackles and aerial duels.", key:"Signed 1998, instant defensive leader", wiki:"https://en.wikipedia.org/wiki/Jaap_Stam" },
+      { id:3, name:"Ronny Johnsen", position:"Centre-back", short:"Composed and versatile defender, stepped up in big games.", key:"Comfortable with ball at feet", wiki:"https://en.wikipedia.org/wiki/Ronny_Johnsen" },
+      { id:4, name:"Gary Neville", position:"Right-back", short:"Product of United's academy, consistent and tactically astute.", key:"Key part of back four", wiki:"https://en.wikipedia.org/wiki/Gary_Neville" },
+      { id:5, name:"Denis Irwin", position:"Left-back", short:"Reliable full-back known for set-pieces and consistency.", key:"Dead-ball specialist", wiki:"https://en.wikipedia.org/wiki/Denis_Irwin" },
+      { id:6, name:"David Beckham", position:"Right Midfield", short:"Crossing, set-pieces, and clutch moments; rising global star.", key:"Cup final performances aided treble run", wiki:"https://en.wikipedia.org/wiki/David_Beckham" },
+      { id:7, name:"Nicky Butt", position:"Central Midfield", short:"Workrate, intelligence and a tidy passer in midfield.", key:"Engine room contribution", wiki:"https://en.wikipedia.org/wiki/Nicky_Butt" },
+      { id:8, name:"Roy Keane", position:"Central Midfield (captain)", short:"Driving force, leadership and tenacity; short-term injury in crucial matches but key overall.", key:"Team leader, inspirational performances", wiki:"https://en.wikipedia.org/wiki/Roy_Keane" },
+      { id:9, name:"Ryan Giggs", position:"Left Midfield", short:"Pace, dribbling and goal threat from the left flank.", key:"Big-match performer across season", wiki:"https://en.wikipedia.org/wiki/Ryan_Giggs" },
+      { id:10, name:"Dwight Yorke", position:"Striker", short:"Clinical striker with excellent hold-up play and link-up with Cole.", key:"Top goalscorer in key cup runs", wiki:"https://en.wikipedia.org/wiki/Dwight_Yorke" },
+      { id:11, name:"Teddy Sheringham", position:"Second Striker", short:"Intelligent movement and crucial late substitutions (famously scored in CL final).", key:"Scored CL final equaliser", wiki:"https://en.wikipedia.org/wiki/Teddy_Sheringham" },
+      { id:12, name:"Andy Cole", position:"Striker", short:"Prolific striker, part of lethal front two with Yorke.", key:"Important goals during season", wiki:"https://en.wikipedia.org/wiki/Andy_Cole" },
+      { id:13, name:"Paul Scholes", position:"Midfield", short:"Passed engine of the team with long-range shooting and vision.", key:"Creative spark from midfield", wiki:"https://en.wikipedia.org/wiki/Paul_Scholes" },
+      { id:14, name:"Ole Gunnar Solskjær", position:"Forward (sub)", short:"Super-sub with an eye for crucial goals.", key:"Scored the CL final winner", wiki:"https://en.wikipedia.org/wiki/Ole_Gunnar_Solskj%C3%A6r" },
+      { id:15, name:"Jesper Blomqvist", position:"Wing/Left-mid", short:"Squad player contributing to depth on the left.", key:"Rotation option across competitions", wiki:"https://en.wikipedia.org/wiki/Jesper_Blomqvist" }
+    ];
+
+    const events = [
+      { year:"1998-05", title:"Jaap Stam signs", desc:"Strengthened defence in preparation for the 1998-99 season." },
+      { year:"1998-08", title:"Season kicks off", desc:"United begin domestic defence with high expectations." },
+      { year:"1999-05-11", title:"FA Cup Final — United win", desc:"United beat Newcastle United 2–0 to secure FA Cup." },
+      { year:"1999-05-22", title:"UEFA Champions League Final vs Bayern Munich", desc:"United come from behind with two late goals from Sheringham and Solskjær to win 2–1. Iconic moment securing the Treble." },
+      { year:"1999-05-16", title:"Premier League title clinched", desc:"United secure the Premier League trophy, completing domestic dominance." }
+    ];
+
+    // Populate squad grid
+    const squadGrid = document.getElementById('squadGrid');
+    squad.forEach(player => {
+      const card = document.createElement('button');
+      card.className = 'card';
+      card.setAttribute('data-player-id', player.id);
+      card.setAttribute('aria-label', player.name + ' profile');
+      card.innerHTML = `
+        <div class="avatar" aria-hidden="true">${initials(player.name)}</div>
+        <div class="info">
+          <div class="name">${player.name}</div>
+          <div class="meta">${player.position}</div>
+        </div>
+      `;
+      card.addEventListener('click', () => openModal(player.id));
+      squadGrid.appendChild(card);
+    });
+
+    // Populate timeline
+    const timeline = document.getElementById('timeline');
+    const rightTimeline = document.getElementById('rightTimeline');
+    events.forEach(ev => {
+      const evNode = document.createElement('div');
+      evNode.className = 'event';
+      evNode.innerHTML = `<div><span class="year">${ev.year}</span> <span style="font-weight:700">${ev.title}</span></div><div style="margin-top:6px;color:var(--muted)">${ev.desc}</div>`;
+      timeline.appendChild(evNode);
+
+      // Right side shorter list
+      const short = document.createElement('div');
+      short.className = 'event';
+      short.innerHTML = `<div><span class="year">${ev.year}</span> ${ev.title}</div>`;
+      rightTimeline.appendChild(short);
+    });
+
+    // Attach pitch pins to open modal
+    document.querySelectorAll('.player-pin').forEach(pin => {
+      pin.addEventListener('click', (e) => {
+        const id = Number(pin.getAttribute('data-player-id'));
+        openModal(id);
+      });
+    });
+
+    // Modal logic
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const modalAvatar = document.getElementById('modalAvatar');
+    const modalName = document.getElementById('modalName');
+    const modalPosition = document.getElementById('modalPosition');
+    const modalBio = document.getElementById('modalBio');
+    const modalKey = document.getElementById('modalKey');
+    const modalWiki = document.getElementById('modalWiki');
+    const modalClose = document.getElementById('modalClose');
+    const modalClose2 = document.getElementById('modalClose2');
+
+    function openModal(id){
+      const p = squad.find(s => s.id === id);
+      if(!p) return;
+      modalAvatar.textContent = initials(p.name);
+      modalName.textContent = p.name;
+      modalPosition.textContent = p.position;
+      modalBio.textContent = p.short;
+      modalKey.textContent = p.key;
+      modalWiki.href = p.wiki;
+      modalBackdrop.style.display = 'flex';
+      modalBackdrop.setAttribute('aria-hidden','false');
+      // focus handling for accessibility
+      modalClose.focus();
+    }
+
+    function closeModal(){
+      modalBackdrop.style.display = 'none';
+      modalBackdrop.setAttribute('aria-hidden','true');
+    }
+
+    modalClose.addEventListener('click', closeModal);
+    modalClose2.addEventListener('click', closeModal);
+    modalBackdrop.addEventListener('click', (e) => {
+      if(e.target === modalBackdrop) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape') closeModal();
+    });
+
+    // Download JSON
+    const downloadBtn = document.getElementById('downloadBtn');
+    downloadBtn.addEventListener('click', () => {
+      const payload = { squad, events, generatedAt: new Date().toISOString(), source: 'Curated sample data' };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], {type:'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'manutd_1998-99_treble_squad.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // small util
+    function initials(name){
+      return name.split(' ').map(n => n[0]).slice(0,2).join('').toUpperCase();
+    }
+
+    // Accessibility: announce counts
+    const live = document.createElement('div');
+    live.setAttribute('aria-live','polite');
+    live.style.position='absolute';
+    live.style.left='-9999px';
+    live.textContent = `Loaded ${squad.length} players and ${events.length} events`;
+    document.body.appendChild(live);
+  </script>
+</body>
+</html>
